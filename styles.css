@@ -54,6 +54,46 @@ section {
   color: black;
 }
 
+#overlay {
+  position: fixed;
+  justify-content: center;
+  display: none;
+  width: 300px;
+  height: 100px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  color: whitesmoke;
+}
+
+#openOverlay {
+  margin: 5% auto 0;
+  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#openOverlay:hover {
+  background: linear-gradient(to right, darkgray, steelblue);
+}
+
+#closeOverlay {
+  position: relative;
+  font-size: 50px;
+  color: black;
+  cursor: pointer;
+  border: 1px transparent white;
+  box-shadow: 10px 10px 15px 30px rgba(70,130,180, 0.75);
+}
+
+#closeOverlay:hover {
+  background: linear-gradient(to right, darkgray, steelblue);
+}
+
 .classcontainer {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +107,9 @@ section {
   max-width: 370px;
 }
 
+.classcontainer p {
+  padding: 10px;
+}
 
 .classcontainer p,
 h2,
