@@ -9,9 +9,13 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
-document.getElementById('openOverlay').addEventListener('click', function() {
-  document.getElementById('overlay').style.display = 'block';
-});
+let openOverlays = document.getElementsByClassName('openOverlay');
+
+for(let i = 0; i < openOverlays.length; i++) {
+  openOverlays[i].addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'block';
+  });
+}
 
 document.getElementById('closeOverlay').addEventListener('click', function() {
   document.getElementById('overlay').style.display = 'none';
